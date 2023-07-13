@@ -1,0 +1,17 @@
+from indicnlp.transliterate import acronym_transliterator
+lang = 'hi'
+# Open the CSV file
+with open(r'C:\Users\S SRIHARI\firefox\filtered.csv', 'r', encoding='utf-8') as file:
+    reader = csv.reader(file)
+    
+    # Iterate over each row in the CSV
+    for row in reader:
+        hindi_text = row[1]  # Assuming Hindi text is in the first column
+        
+        # Tokenize the Hindi text
+        ack_transliterator=acronym_transliterator.LatinToIndicAcronymTransliterator()
+        print(ack_transliterator.transliterate(hindi_text,lang='en'))
+      
+    
+
+       
