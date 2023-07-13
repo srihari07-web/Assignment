@@ -8,7 +8,7 @@ with open(r'C:\Users\S SRIHARI\firefox\filtered.csv', 'r', encoding='utf-8') as 
     for row in reader:
         hindi_text = row[1]  # Assuming Hindi text is in the first column
         
-        t
+       
         ack_transliterator=acronym_transliterator.LatinToIndicAcronymTransliterator()
         print(ack_transliterator.transliterate(hindi_text,lang='en'))
       
